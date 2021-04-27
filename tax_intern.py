@@ -51,8 +51,8 @@ class TaxCalculator:
 if __name__ == '__main__':
     tex_calculator = TaxCalculator()
     # 示例：已经实习三个月，日薪（日薪+餐补）*出勤天数，再加上房补，假设税前月薪分别是6000，7000，8000
-    # 根据地区政策或者公司政策，每个月免扣税额为X元，以300元为例
-    # 假设本月税前工资是9000，还是月免扣税额300，则可计算出当月薪资
+    # 根据地区政策或者公司政策，每个月扣除项合计金额为X元，以300元为例
+    # 假设本月税前工资是9000，还是扣除项合计金额300，则可计算出当月薪资
     past_month_pays, exceed_sums, texs, final_get_moneys = tex_calculator.getCurrentMonthPay([6000, 7000, 8000],
                                                                                              [300, 300, 300],
                                                                                              9000, 300)
