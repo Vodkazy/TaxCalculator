@@ -37,10 +37,9 @@ class TaxCalculator:
                 if exceed_sums[i] > self.rate_matrix.ix[j]['upper_bound']:
                     sum_tex += (self.rate_matrix.ix[j]['upper_bound'] - self.rate_matrix.ix[j]['lower_bound']) * \
                                self.rate_matrix.ix[j]['rate']
-                    break
                 else:
                     sum_tex += (exceed_sums[i] - self.rate_matrix.ix[j]['lower_bound']) * self.rate_matrix.ix[j]['rate']
-                    break
+                break
             if i == 0:
                 texs.append(sum_tex)
             else:
